@@ -13,11 +13,13 @@ import com.example.mybase.databinding.ItemDeptBinding;
 
 import java.util.List;
 
-public class MyDebtsAdapter extends RecyclerView.Adapter<MyDebtsAdapter.MyHolder> {
+public class MyDebtsAdapter extends
+        RecyclerView.Adapter<MyDebtsAdapter.MyHolder> {
     List<DebtEntity> data;
     public MyDebtsAdapter(List<DebtEntity> data){
         this.data=data;
     }
+
     @NonNull
     @Override
     public MyDebtsAdapter.MyHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -27,7 +29,7 @@ public class MyDebtsAdapter extends RecyclerView.Adapter<MyDebtsAdapter.MyHolder
 
     @Override
     public void onBindViewHolder(@NonNull MyDebtsAdapter.MyHolder holder, int position) {
-        holder.name.setText(data.get(position).money);
+        holder.name.setText(data.get(position).money+"");
         holder.money.setText(""+position);
     }
 
